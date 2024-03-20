@@ -1,0 +1,10 @@
+version: '3.0'
+name: restore-db-backup
+services:
+  restored-db:
+    container_name: my-restored-db
+    build: 
+      context: .
+    image: restored-db:1.0.0
+    ports:
+      - "11433:1433"
